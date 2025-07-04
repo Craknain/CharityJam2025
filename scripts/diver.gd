@@ -12,4 +12,3 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * SPEED
 	move_and_slide()
 	
-	position = position.clamp(Vector2.ZERO, get_viewport_rect().size)
