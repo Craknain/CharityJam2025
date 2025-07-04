@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://inxce5pe2ij6"]
+
+[ext_resource type="PackedScene" uid="uid://dedan0nluh4uu" path="res://scenes/diver.tscn" id="1_uwrxv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
+distance = -166.333
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lnu2h"]
+distance = -436.667
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lbhrr"]
+distance = -29.55
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
+distance = -85.0
+
+[node name="Game" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(578, 538)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 3000
+
+[node name="Borders" type="StaticBody2D" parent="."]
+position = Vector2(576, 1500)
+
+[node name="Top" type="CollisionShape2D" parent="Borders"]
+rotation = 3.14159
+scale = Vector2(9, 9)
+shape = SubResource("WorldBoundaryShape2D_yqjtg")
+
+[node name="Bottom" type="CollisionShape2D" parent="Borders"]
+position = Vector2(20, -2413)
+scale = Vector2(9, 9)
+shape = SubResource("WorldBoundaryShape2D_lnu2h")
+
+[node name="Right" type="CollisionShape2D" parent="Borders"]
+rotation = 1.5708
+scale = Vector2(20, 20)
+shape = SubResource("WorldBoundaryShape2D_lbhrr")
+
+[node name="Left" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-1118, 17)
+rotation = -1.5708
+scale = Vector2(20, 20)
+shape = SubResource("WorldBoundaryShape2D_iywne")
