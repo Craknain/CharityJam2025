@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://inxce5pe2ij6"]
+[gd_scene load_steps=7 format=3 uid="uid://inxce5pe2ij6"]
 
 [ext_resource type="PackedScene" uid="uid://dedan0nluh4uu" path="res://scenes/diver.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://bkvonkue6xexc" path="res://scenes/boat_part.tscn" id="2_yqjtg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = -166.333
@@ -21,10 +22,13 @@ position = Vector2(578, 538)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(2, 2)
+process_callback = 0
 limit_left = 0
 limit_top = 0
 limit_right = 1152
 limit_bottom = 3000
+limit_smoothed = true
+position_smoothing_enabled = true
 
 [node name="Borders" type="StaticBody2D" parent="."]
 position = Vector2(576, 1500)
@@ -49,3 +53,14 @@ position = Vector2(-1118, 17)
 rotation = -1.5708
 scale = Vector2(20, 20)
 shape = SubResource("WorldBoundaryShape2D_iywne")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="BoatPart" parent="Node" instance=ExtResource("2_yqjtg")]
+position = Vector2(446, 541)
+
+[node name="BoatPart2" parent="Node" instance=ExtResource("2_yqjtg")]
+position = Vector2(499, 653)
+
+[node name="BoatPart3" parent="Node" instance=ExtResource("2_yqjtg")]
+position = Vector2(676, 539)
