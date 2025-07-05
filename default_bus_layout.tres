@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://b462lh1l2kgxg"]
+[gd_resource type="AudioBusLayout" load_steps=0 format=3 uid="uid://b462lh1l2kgxg"]
 
 [resource]
 bus/1/name = &"Music"

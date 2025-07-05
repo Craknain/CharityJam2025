@@ -1,7 +1,6 @@
-[gd_resource type="Theme" load_steps=53 format=3 uid="uid://cb2tqos08yhkd"]
+[gd_resource type="Theme" load_steps=52 format=3 uid="uid://k2exx5sspodi"]
 
 [ext_resource type="FontFile" uid="uid://dsisvfrdgqau" path="res://assets/Cubic_11_1.013_R.ttf" id="1_vgqbv"]
-[ext_resource type="Texture2D" uid="uid://6pnkpupuhda" path="res://assets/MinimalUI/icons.svg" id="2"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0, 0, 0, 1)
@@ -31,19 +30,15 @@ border_width_bottom = 1
 border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="AtlasTexture" id="22"]
-atlas = ExtResource("2")
 region = Rect2(37, 111, 18, 18)
 
 [sub_resource type="AtlasTexture" id="23"]
-atlas = ExtResource("2")
 region = Rect2(85, 111, 18, 18)
 
 [sub_resource type="AtlasTexture" id="24"]
-atlas = ExtResource("2")
 region = Rect2(61, 111, 18, 18)
 
 [sub_resource type="AtlasTexture" id="25"]
-atlas = ExtResource("2")
 region = Rect2(13, 111, 18, 18)
 
 [sub_resource type="StyleBoxEmpty" id="26"]
@@ -52,19 +47,15 @@ region = Rect2(13, 111, 18, 18)
 bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="AtlasTexture" id="5"]
-atlas = ExtResource("2")
 region = Rect2(13, 79, 34, 19)
 
 [sub_resource type="AtlasTexture" id="6"]
-atlas = ExtResource("2")
 region = Rect2(93, 79, 34, 19)
 
 [sub_resource type="AtlasTexture" id="7"]
-atlas = ExtResource("2")
 region = Rect2(53, 79, 34, 19)
 
 [sub_resource type="AtlasTexture" id="8"]
-atlas = ExtResource("2")
 region = Rect2(133, 79, 34, 19)
 
 [sub_resource type="StyleBoxEmpty" id="49"]
@@ -112,15 +103,12 @@ border_color = Color(0.282353, 0.282353, 0.282353, 1)
 color = Color(0.282353, 0.282353, 0.282353, 1)
 
 [sub_resource type="AtlasTexture" id="9"]
-atlas = ExtResource("2")
 region = Rect2(80, 10, 12, 28)
 
 [sub_resource type="AtlasTexture" id="10"]
-atlas = ExtResource("2")
 region = Rect2(112, 10, 12, 28)
 
 [sub_resource type="AtlasTexture" id="11"]
-atlas = ExtResource("2")
 region = Rect2(144, 10, 12, 28)
 
 [sub_resource type="StyleBoxFlat" id="12"]
@@ -291,15 +279,12 @@ color = Color(0.282353, 0.282353, 0.282353, 1)
 vertical = true
 
 [sub_resource type="AtlasTexture" id="15"]
-atlas = ExtResource("2")
 region = Rect2(74, 52, 24, 10)
 
 [sub_resource type="AtlasTexture" id="16"]
-atlas = ExtResource("2")
 region = Rect2(106, 52, 24, 8)
 
 [sub_resource type="AtlasTexture" id="17"]
-atlas = ExtResource("2")
 region = Rect2(138, 52, 24, 8)
 
 [sub_resource type="StyleBoxFlat" id="18"]

@@ -42,4 +42,4 @@ func _on_option_pressed():
 	settings.reset_focus()
 
 func _on_main_menu_pressed():
-	Utilities.switch_scene("MainMenu", self)
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

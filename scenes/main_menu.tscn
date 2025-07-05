@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dc388hkklqvvc"]
+[gd_scene load_steps=11 format=3 uid="uid://cjt4vbr0esme8"]
 
-[ext_resource type="Theme" uid="uid://cb2tqos08yhkd" path="res://assets/MinimalUI/MinimalUI.tres" id="1_0ajpt"]
 [ext_resource type="Script" uid="uid://du0e2pk1nfcvk" path="res://scripts/main_menu.gd" id="1_tievw"]
-[ext_resource type="Texture2D" uid="uid://0qbbdx3qtafm" path="res://main__menu_background.webp" id="2_wu84c"]
-[ext_resource type="PackedScene" uid="uid://603k3vy4p3f1" path="res://scenes/settings.tscn" id="3_dt7l5"]
+[ext_resource type="Texture2D" uid="uid://cvmgj0ntmivw7" path="res://main__menu_background.webp" id="2_8ln24"]
+[ext_resource type="PackedScene" uid="uid://dr48px3hnfj0l" path="res://scenes/settings.tscn" id="3_dt7l5"]
 [ext_resource type="FontFile" uid="uid://dsisvfrdgqau" path="res://assets/Cubic_11_1.013_R.ttf" id="4_8ln24"]
-[ext_resource type="PackedScene" uid="uid://d0eovfniq78mf" path="res://scenes/credits.tscn" id="6_rtw2f"]
+[ext_resource type="PackedScene" uid="uid://8tafjp5lnukg" path="res://scenes/credits.tscn" id="6_rtw2f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1go"]
 bg_color = Color(0.125911, 0.125911, 0.125911, 1)
@@ -45,7 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_wu84c")
+texture = ExtResource("2_8ln24")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu"]
 layout_mode = 1
@@ -65,7 +64,6 @@ grow_vertical = 2
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 6
-theme = ExtResource("1_0ajpt")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "game name
@@ -80,7 +78,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Option")
-theme = ExtResource("1_0ajpt")
 theme_override_font_sizes/font_size = 24
 text = "Start"
 
@@ -91,7 +88,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../credits")
-theme = ExtResource("1_0ajpt")
 theme_override_font_sizes/font_size = 24
 text = "Option"
 
@@ -115,13 +111,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../Option")
 focus_neighbor_bottom = NodePath("../Start")
-theme = ExtResource("1_0ajpt")
 theme_override_font_sizes/font_size = 24
 text = "Quit
 "
 
 [node name="Settings" parent="UI" node_paths=PackedStringArray("pre_scene") instance=ExtResource("3_dt7l5")]
 visible = false
+theme = null
 pre_scene = NodePath("../MainMenu")
 
 [node name="Credits" parent="UI" instance=ExtResource("6_rtw2f")]

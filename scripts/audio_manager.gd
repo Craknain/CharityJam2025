@@ -1,13 +1,15 @@
 extends Node
 
-@onready var music_player: AudioStreamPlayer = $MusicPlayer
-@onready var sound_player: AudioStreamPlayer = $SoundPlayer
+@onready var music: AudioStreamPlayer = $Music
+@onready var sfx: AudioStreamPlayer = $SFX
+
 
 func _ready():
 	pass # Replace with function body.
 
 func play_button_sound():
-	sound_player.play()
-
+	sfx.play()
+	
 func play_music_sound():
-	music_player.play()
+	music.play()
+	

@@ -10,7 +10,7 @@ func reset_focus():
 	$VBoxContainer/Start.grab_focus()
 
 func _on_start_pressed():
-	Utilities.switch_scene("SampleGame", self)
+	get_tree().change_scene_to_file("res://scenes/Main_Game.tscn")
 	AudioManager.play_music_sound()
 
 func _on_option_pressed():
