@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://7dfj14oq5hr8"]
+
+[ext_resource type="Texture2D" uid="uid://c5ivgwd81gl8q" path="res://assets/Bubble_test.png" id="1_58yxb"]
+[ext_resource type="Script" uid="uid://de1oncgk3ct78" path="res://scripts/oxygen_bubble.gd" id="1_jwntj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayy2p"]
+atlas = ExtResource("1_58yxb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfn23"]
+atlas = ExtResource("1_58yxb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_je61w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayy2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfn23")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hyinq"]
+radius = 18.1108
+
+[node name="OxygenBubble" type="AnimatedSprite2D"]
+position = Vector2(309, 142)
+sprite_frames = SubResource("SpriteFrames_je61w")
+frame = 1
+frame_progress = 0.150472
+script = ExtResource("1_jwntj")
+
+[node name="CollectAreaZone" type="Area2D" parent="."]
+position = Vector2(5, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectAreaZone"]
+position = Vector2(-4, -2)
+shape = SubResource("CircleShape2D_hyinq")
+
+[connection signal="body_entered" from="CollectAreaZone" to="." method="_on_collect_area_zone_body_entered"]
