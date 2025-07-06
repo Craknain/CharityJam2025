@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://dql7h531s6fcj"]
+
+[ext_resource type="Theme" uid="uid://k2exx5sspodi" path="res://assets/MinimalUI/MinimalUI.tres" id="1_f1d2v"]
+[ext_resource type="Script" uid="uid://cwfkci4jts0q8" path="res://scripts/pause.gd" id="1_r8yp4"]
+
+[node name="pause" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r8yp4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = -464.0
+offset_top = -226.0
+offset_right = 495.0
+offset_bottom = 243.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ColorRect/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Resume" type="Button" parent="Panel/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_f1d2v")
+theme_override_font_sizes/font_size = 24
+text = "resume
+"
+
+[node name="reset" type="Button" parent="Panel/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_f1d2v")
+theme_override_font_sizes/font_size = 24
+text = "Reset
+"
+
+[node name="main menu" type="Button" parent="Panel/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_f1d2v")
+theme_override_font_sizes/font_size = 24
+text = "Main Menu
+"
+
+[connection signal="pressed" from="Panel/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Panel/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/main menu" to="." method="_on_main_menu_pressed"]

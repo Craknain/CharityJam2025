@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b14m1j83lefh0"]
+
+[ext_resource type="Script" uid="uid://bbfm4dxmsrrps" path="res://scripts/settings.gd" id="1_r6d6q"]
+[ext_resource type="Theme" uid="uid://k2exx5sspodi" path="res://assets/MinimalUI/MinimalUI.tres" id="2_6wm04"]
+
+[node name="settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6d6q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Back" type="Button" parent="ColorRect"]
+custom_minimum_size = Vector2(100, 34)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_6wm04")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[connection signal="pressed" from="ColorRect/Back" to="." method="_on_back_pressed"]

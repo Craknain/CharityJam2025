@@ -18,11 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioManager="*res://scenes/audio_manager.tscn"
-Utilities="*res://scenes/utilities.tscn"
-
-[display]
-
-window/size/viewport_height=3000
 
 [global_group]
 
