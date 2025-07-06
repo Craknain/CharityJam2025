@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0c8juw5ny8cv"]
+
+[ext_resource type="Script" uid="uid://dso6y74c0pcqw" path="res://scripts/victory_screen.gd" id="1_pfcnd"]
+[ext_resource type="Theme" uid="uid://k2exx5sspodi" path="res://assets/MinimalUI/MinimalUI.tres" id="1_wdgif"]
+[ext_resource type="FontFile" uid="uid://dsisvfrdgqau" path="res://assets/Cubic_11_1.013_R.ttf" id="2_pfcnd"]
+
+[node name="victory screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pfcnd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(148, 50)
+layout_mode = 2
+theme = ExtResource("1_wdgif")
+theme_override_fonts/font = ExtResource("2_pfcnd")
+theme_override_font_sizes/font_size = 70
+text = "VICTORY!"
+
+[node name="spacer" type="Control" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="restart" type="Button" parent="ColorRect/MarginContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 34)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_wdgif")
+text = "Restart"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="main menu" type="Button" parent="ColorRect/MarginContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 34)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_wdgif")
+text = "Main Menu"
+
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer2/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer2/main menu" to="." method="_on_main_menu_pressed"]

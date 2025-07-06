@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvl1kih7qyswx"]
+
+[ext_resource type="Script" uid="uid://cp07woo6uk5n1" path="res://scripts/defeat_screen.gd" id="1_py13i"]
+[ext_resource type="FontFile" uid="uid://dsisvfrdgqau" path="res://assets/Cubic_11_1.013_R.ttf" id="2_lccwt"]
+[ext_resource type="Theme" uid="uid://k2exx5sspodi" path="res://assets/MinimalUI/MinimalUI.tres" id="3_4jxtf"]
+
+[node name="defeat screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_py13i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lccwt")
+theme_override_font_sizes/font_size = 70
+text = "DEFEAT!"
+
+[node name="Control" type="Control" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 193)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Reset" type="Button" parent="ColorRect/MarginContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 34)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_4jxtf")
+text = "Reset"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="main menu" type="Button" parent="ColorRect/MarginContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(100, 34)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_4jxtf")
+text = "Main Menu"
+
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer2/Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/HBoxContainer2/VBoxContainer/main menu" to="." method="_on_main_menu_pressed"]
