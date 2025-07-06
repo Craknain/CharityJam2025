@@ -25,5 +25,12 @@ func lose_oxygen(amount: int):
 	if oxygen_timer.time_left - amount < 0:
 		print("Dead") # TODO: Go to game over page
 	oxygen_timer.start(oxygen_timer.time_left - amount)
-	
-	
+
+func _on_surface_body_entered(body: Node2D) -> void:
+	if body.is_in_group('player'):
+		refill_oxygen(MAX_OXYGEN)
+		oxygen_timer.paused = true
+
+func _on_surface_body_exited(body: Node2D) -> void:
+	if body.is_in_group('player'):
+		oxygen_timer.paused = false

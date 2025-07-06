@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://inxce5pe2ij6"]
+[gd_scene load_steps=11 format=3 uid="uid://inxce5pe2ij6"]
 
 [ext_resource type="PackedScene" uid="uid://dedan0nluh4uu" path="res://scenes/diver.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://c8cnarsc2nt5s" path="res://scripts/oxygen_progress_bar.gd" id="2_lnu2h"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dwq7yhejvrwji" path="res://scenes/fish.tscn" id="5_iywne"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
-distance = -166.333
+distance = -134.444
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lnu2h"]
 distance = -436.667
@@ -17,6 +17,9 @@ distance = -29.55
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
 distance = -85.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
+size = Vector2(1114, 48)
 
 [node name="Game" type="Node2D"]
 
@@ -88,4 +91,13 @@ position = Vector2(482, 370)
 [node name="Fish" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(821, 544)
 
+[node name="Surface" type="Area2D" parent="."]
+position = Vector2(229, -27)
+
+[node name="SurfaceShape" type="CollisionShape2D" parent="Surface"]
+position = Vector2(343, 328)
+shape = SubResource("RectangleShape2D_iywne")
+
 [connection signal="timeout" from="CharacterBody2D/Camera2D/OxygenTimer" to="CharacterBody2D" method="_on_oxygen_timer_timeout"]
+[connection signal="body_entered" from="Surface" to="CharacterBody2D" method="_on_surface_body_entered"]
+[connection signal="body_exited" from="Surface" to="CharacterBody2D" method="_on_surface_body_exited"]
