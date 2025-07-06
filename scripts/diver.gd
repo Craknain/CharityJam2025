@@ -13,7 +13,7 @@ func _ready():
 	oxygen_timer.wait_time = MAX_OXYGEN
 
 func _physics_process(delta: float) -> void:
-	var direction := Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down"))
+	var direction := Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()
 	rotation = global_position.angle_to_point(direction + global_position)
 	if rotation > PI/2 or rotation < -PI/2:
 		animated_sprite_2d.flip_v = true
