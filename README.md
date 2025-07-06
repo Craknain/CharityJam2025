@@ -4,7 +4,7 @@ Programming:
 
 - Merge main menu made by TheBugMaker **DONE?**
 - Oxygen mechanic (dropping slowly + bubble giving more) **DONE**
-	- Regain oxygen by going to surface **NOT DONE**
+	- Regain oxygen by going to surface **DONE**
 - Collision with fish and boat parts **DONE**
 - Picking up a survivor and dragging him/her to the surface -> move slower **NOT DONE**
 - Spawning obstacles (fish and boat parts) randomly but not in a dumb way (no overlapping and not too close to each other or to survivors) **NOT DONE**
