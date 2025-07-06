@@ -1,7 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://dql7h531s6fcj"]
+[gd_scene load_steps=3 format=3 uid="uid://svnrpg8uc7rd"]
 
 [ext_resource type="Theme" uid="uid://k2exx5sspodi" path="res://assets/MinimalUI/MinimalUI.tres" id="1_f1d2v"]
-[ext_resource type="Script" uid="uid://cwfkci4jts0q8" path="res://scripts/pause.gd" id="1_r8yp4"]
+
+[sub_resource type="GDScript" id="GDScript_f1d2v"]
+script/source = "extends Control
+
+@onready var control: Control = $\".\"
+@onready var settings: Control = $settings
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
+func _on_resume_pressed() -> void:
+	get_tree().paused = false
+	control.hide()
+
+
+
+func _on_reset_pressed() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+
+
+func _on_main_menu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file(\"res://scenes/main_menu.tscn\")
+"
 
 [node name="pause" type="Control"]
 process_mode = 2
@@ -11,7 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_r8yp4")
+script = SubResource("GDScript_f1d2v")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

@@ -1,7 +1,9 @@
 extends Node
 
 
+
 @onready var pause: Control = $CharacterBody2D/Camera2D/pause
+
 
 
 func _ready():
