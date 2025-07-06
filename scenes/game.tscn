@@ -115,7 +115,7 @@ scale = Vector2(9, 9)
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
 
 [node name="Bottom" type="CollisionShape2D" parent="Borders"]
-position = Vector2(15, -2070)
+position = Vector2(-16, -2432)
 scale = Vector2(9, 9)
 shape = SubResource("WorldBoundaryShape2D_lnu2h")
 
