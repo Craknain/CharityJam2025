@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://dwq7yhejvrwji"]
+
+[ext_resource type="Texture2D" uid="uid://c5y7r1fjogljw" path="res://assets/Fish_1.png" id="1_pgks6"]
+[ext_resource type="Texture2D" uid="uid://cpjm7vbev2be8" path="res://assets/Fish_1_Bite.png" id="2_6lgmd"]
+[ext_resource type="Texture2D" uid="uid://cf0phouxeo030" path="res://assets/Fish_1_Idle.png" id="3_wpvan"]
+[ext_resource type="Texture2D" uid="uid://duxb3vh7sspb0" path="res://assets/Fish_1_Idle_2.png" id="4_21k1a"]
+[ext_resource type="Script" uid="uid://si1cxm7lck72" path="res://scripts/fish.gd" id="5_6lgmd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgks6"]
+atlas = ExtResource("1_pgks6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lgmd"]
+atlas = ExtResource("2_6lgmd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpvan"]
+atlas = ExtResource("3_wpvan")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21k1a"]
+atlas = ExtResource("4_21k1a")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bvcvt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgks6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lgmd")
+}],
+"loop": true,
+"name": &"agressive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpvan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21k1a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pgks6"]
+radius = 29.0
+
+[node name="Fish" type="Node2D"]
+script = ExtResource("5_6lgmd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bvcvt")
+animation = &"agressive"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, -2)
+shape = SubResource("CircleShape2D_pgks6")
+
+[node name="BottomRay" type="RayCast2D" parent="."]
+target_position = Vector2(-100, 50)
+
+[node name="MiddleRay" type="RayCast2D" parent="."]
+target_position = Vector2(-120, 0)
+
+[node name="TopRay" type="RayCast2D" parent="."]
+target_position = Vector2(-100, -50)
+
+[node name="AgressionTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="AgressionTimer" to="." method="_on_agression_timer_timeout"]
