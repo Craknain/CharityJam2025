@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 var MAX_OXYGEN := 30
 
-const SPEED := 150.0
+const SPEED := 200.0
 
 func _ready():
 	oxygen_timer.wait_time = MAX_OXYGEN
