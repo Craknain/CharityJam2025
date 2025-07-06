@@ -14,8 +14,8 @@ extends Node2D
 var target: Node2D = null
 var going_back: bool = false
 
-var SPEED: int = 50
-var MAX_DISTANCE : int = 500
+var SPEED: int = 100
+var MAX_DISTANCE : int = 300
 
 var direction: Vector2 = Vector2(-1,0)
 
@@ -64,8 +64,9 @@ func _process(delta: float) -> void:
 		else:
 			animated_sprite_2d.flip_v = true if (rotation > PI/2 or rotation < -PI/2) else false
 		if global_position == initial_pos:
-			for ray in rays:
-				ray.enabled = true
+			if agression_timer.is_stopped():
+				for ray in rays:
+					ray.enabled = true
 			going_back = false
 			rotation = 0
 			animated_sprite_2d.flip_h = false
