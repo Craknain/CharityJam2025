@@ -2,7 +2,6 @@
 
 Programming:
 
-- Merge main menu made by TheBugMaker **DONE?**
 - Oxygen mechanic (dropping slowly + bubble giving more) **DONE**
 	- Regain oxygen by going to surface **DONE**
 - Collision with fish and boat parts **DONE**
@@ -14,11 +13,10 @@ Programming:
 Art:
 - Humans and the diver **NOT DONE**
 	- Diver's animation is the most important, main character, always in the middle of the screen **NOT DONE**
-- Water background **TO BE APPLIED**
-- Main part of the drowning people's boat **NOT DONE**
+- Water background **DONE**
 - Safety boat waiting for the survivors **DONE**
 - Fish **DONE**
-- Little logo of bubbles to put near the oxygen bar **NOT DONE/REUSE BUBBLE SPRITE?**
+- Little logo of bubbles to put near the oxygen bar **DONE**
 - Oxygen bubbles **DONE**
 - Bit of sand at the bottom **DONE**
 
@@ -26,10 +24,9 @@ Music and sounds:
 
 - Main menu **DONE**
 - During the game **DONE**
-- Victory **NOT DONE**
-- Game over **NOT DONE**
+- Victory **DONE**
+- Game over **DONE**
 - Collision with boat part **NOT DONE**
 - Collision with fish **NOT DONE**
-- Saved someone **NOT DONE**
+- Saved something **NOT DONE**
 - Collect a bubble **NOT DONE**
-- Moving sound? **NOT DONE**

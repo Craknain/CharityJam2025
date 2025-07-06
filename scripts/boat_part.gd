@@ -16,7 +16,7 @@ func _ready():
 	amplitude = randf_range(0.4, 0.6)
 	frequency = randf_range(1, 5)
 	sprite_2d.frame = randi_range(0, 2)
-	delay_animation.wait_time = randf_range(0, 2)
+	delay_animation.wait_time = randf_range(0, 1)
 	delay_animation.start()
 
 

@@ -100,7 +100,7 @@ text = "TheBugMaker"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_2fbfq")
 theme_override_font_sizes/font_size = 20
-text = "Richard"
+text = "Craknain"
 
 [node name="member3" type="LinkButton" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
