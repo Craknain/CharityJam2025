@@ -15,6 +15,7 @@ var target: Node2D = null
 var going_back: bool = false
 
 var SPEED: int = 50
+var MAX_DISTANCE : int = 500
 
 var direction: Vector2 = Vector2(-1,0)
 
@@ -44,7 +45,9 @@ func _process(delta: float) -> void:
 		global_position += direction * SPEED * delta
 		
 		# Went too far from his initial location
-		if global_position.distance_to(initial_pos) > 100:
+		if global_position.distance_to(initial_pos) > MAX_DISTANCE:
+			for ray in rays:
+				ray.enabled = false
 			target = null
 			going_back= true
 			animated_sprite_2d.flip_h = !animated_sprite_2d.flip_h
@@ -61,12 +64,15 @@ func _process(delta: float) -> void:
 		else:
 			animated_sprite_2d.flip_v = true if (rotation > PI/2 or rotation < -PI/2) else false
 		if global_position == initial_pos:
+			for ray in rays:
+				ray.enabled = true
 			going_back = false
 			rotation = 0
 			animated_sprite_2d.flip_h = false
 			animated_sprite_2d.flip_v = false
 			direction = Vector2(-1,0)
 	
+	# Idle animation, going back and forth and non-agressive
 	else:
 		if global_position.x - initial_pos.x > 100:
 			direction = Vector2(-1, 0)
