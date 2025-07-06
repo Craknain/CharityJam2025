@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @onready var oxygen_timer: Timer = $Camera2D/OxygenTimer
+@onready var i_frame: AnimationPlayer = $iFrame
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 var MAX_OXYGEN := 30
 
@@ -25,6 +27,7 @@ func lose_oxygen(amount: int):
 	if oxygen_timer.time_left - amount < 0:
 		print("Dead") # TODO: Go to game over page
 	oxygen_timer.start(oxygen_timer.time_left - amount)
+	get_hit()
 
 func _on_surface_body_entered(body: Node2D) -> void:
 	if body.is_in_group('player'):
@@ -34,3 +37,7 @@ func _on_surface_body_entered(body: Node2D) -> void:
 func _on_surface_body_exited(body: Node2D) -> void:
 	if body.is_in_group('player'):
 		oxygen_timer.paused = false
+		
+func get_hit():
+	i_frame.play("iFrame")
+	
