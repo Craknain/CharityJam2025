@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_oxygen_timer_timeout() -> void:
-	print("Dead") # TODO : replace with go to scene Game Over
+	get_tree().change_scene_to_file("res://scenes/defeat_screen.tscn")
 	
 func refill_oxygen(amount: int):
 	oxygen_timer.start(min(oxygen_timer.time_left + amount, MAX_OXYGEN))
