@@ -15,7 +15,6 @@ var target: Node2D = null
 var going_back: bool = false
 
 var SPEED: int = 50
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var direction: Vector2 = Vector2(-1,0)
 
