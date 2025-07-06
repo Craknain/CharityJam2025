@@ -2,34 +2,34 @@
 
 Programming:
 
-- Merge main menu made by TheBugMaker
-- Oxygen mechanic (dropping slowly + bubble giving more)
-	- Regain oxygen by going to surface
-- Collision with fish and boat parts
-- Picking up a survivor and dragging him/her to the surface -> move slower
-- Spawning obstacles (fish and boat parts) randomly but not in a dumb way (no overlapping and not too close to each other or to survivors)
-- Spawning bubbles randomly and make them disappear after a bit of time
-- Smooth the camera movements
+- Merge main menu made by TheBugMaker **DONE?**
+- Oxygen mechanic (dropping slowly + bubble giving more) **DONE**
+	- Regain oxygen by going to surface **NOT DONE**
+- Collision with fish and boat parts **DONE**
+- Picking up a survivor and dragging him/her to the surface -> move slower **NOT DONE**
+- Spawning obstacles (fish and boat parts) randomly but not in a dumb way (no overlapping and not too close to each other or to survivors) **NOT DONE**
+- Spawning bubbles randomly and make them disappear after a bit of time **NOT DONE**
+- Smooth the camera movements **DONE**
 
 Art:
-- Humans and the diver
-	- Diver's animation is the most important, main character, always in the middle of the screen
-- Water background
-- Main part of the boat that is sinking slowly in the background?
-- Safety boat waiting for the survivors
-- More fishes
-- Little logo of bubbles to put near the oxygen bar
-- Oxygen bubbles
-- Bit of sand at the bottom?
+- Humans and the diver **NOT DONE**
+	- Diver's animation is the most important, main character, always in the middle of the screen **NOT DONE**
+- Water background **TO BE APPLIED**
+- Main part of the drowning people's boat **NOT DONE**
+- Safety boat waiting for the survivors **DONE**
+- Fish **DONE**
+- Little logo of bubbles to put near the oxygen bar **NOT DONE/REUSE BUBBLE SPRITE?**
+- Oxygen bubbles **DONE**
+- Bit of sand at the bottom **DONE**
 
 Music and sounds:
 
-- Main menu
-- During the game
-- Victory
-- Game over
-- Collision with boat part
-- Collision with fish
-- Saved someone
-- Collect a bubble
-- Moving sound? 
+- Main menu **DONE**
+- During the game **DONE**
+- Victory **NOT DONE**
+- Game over **NOT DONE**
+- Collision with boat part **NOT DONE**
+- Collision with fish **NOT DONE**
+- Saved someone **NOT DONE**
+- Collect a bubble **NOT DONE**
+- Moving sound? **NOT DONE**
