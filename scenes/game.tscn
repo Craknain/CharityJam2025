@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://inxce5pe2ij6"]
+[gd_scene load_steps=20 format=4 uid="uid://inxce5pe2ij6"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dedan0nluh4uu" path="res://scenes/diver.tscn" id="1_uwrxv"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://scenes/pause.tscn" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dwq7yhejvrwji" path="res://scenes/fish.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://s75880gncg67" path="res://assets/Water_TileSheet.png" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://db0kcb4jqbxg3" path="res://assets/Bubble_Logo.png" id="8_dinhu"]
 [ext_resource type="Texture2D" uid="uid://dg7r4bewuei7r" path="res://assets/Sunset.png" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bofkt3wg8n7tf" path="res://assets/Boat_Happy_Face.png" id="11_kvpfn"]
 
@@ -73,16 +74,6 @@ limit_bottom = 3000
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="OxygenProgressBar" type="ProgressBar" parent="CharacterBody2D/Camera2D"]
-offset_left = -210.0
-offset_top = -54.0
-offset_right = -68.0
-offset_bottom = -27.0
-max_value = 30.0
-fill_mode = 1
-script = ExtResource("2_lnu2h")
-metadata/_edit_use_anchors_ = true
-
 [node name="OxygenTimer" type="Timer" parent="CharacterBody2D/Camera2D"]
 wait_time = 30.0
 one_shot = true
@@ -91,6 +82,23 @@ autostart = true
 [node name="pause" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_u5sy4")]
 visible = false
 z_index = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D"]
+
+[node name="OxygenProgressBar" type="ProgressBar" parent="CharacterBody2D/CanvasLayer"]
+offset_left = 18.0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 35.0
+max_value = 30.0
+fill_mode = 1
+script = ExtResource("2_lnu2h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CanvasLayer"]
+position = Vector2(178, 25)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_dinhu")
 
 [node name="BottomSand" type="Sprite2D" parent="."]
 position = Vector2(554, 2962)

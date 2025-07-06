@@ -1,6 +1,6 @@
 extends ProgressBar
 
-@onready var oxygen_timer: Timer = $"../OxygenTimer"
+@onready var oxygen_timer: Timer = $"../../Camera2D/OxygenTimer"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
