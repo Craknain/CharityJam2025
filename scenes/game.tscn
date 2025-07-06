@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=14 format=3 uid="uid://inxce5pe2ij6"]
-=======
 [gd_scene load_steps=20 format=4 uid="uid://inxce5pe2ij6"]
->>>>>>> b1aaf1c7347a3912431dfbe32346e7ab90115428
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dedan0nluh4uu" path="res://scenes/diver.tscn" id="1_uwrxv"]
@@ -12,9 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://7dfj14oq5hr8" path="res://scenes/oxygen_bubble.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" path="res://scenes/pause.tscn" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dwq7yhejvrwji" path="res://scenes/fish.tscn" id="5_iywne"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://b14m1j83lefh0" path="res://scenes/settings.tscn" id="9_vtaks"]
-=======
 [ext_resource type="Texture2D" uid="uid://s75880gncg67" path="res://assets/Water_TileSheet.png" id="6_p57ef"]
 [ext_resource type="Texture2D" uid="uid://db0kcb4jqbxg3" path="res://assets/Bubble_Logo.png" id="8_dinhu"]
 [ext_resource type="Texture2D" uid="uid://dg7r4bewuei7r" path="res://assets/Sunset.png" id="10_vtaks"]
@@ -29,7 +23,6 @@ texture = ExtResource("6_p57ef")
 
 [sub_resource type="TileSet" id="TileSet_gee14"]
 sources/0 = SubResource("TileSetAtlasSource_u5sy4")
->>>>>>> b1aaf1c7347a3912431dfbe32346e7ab90115428
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = -134.444
