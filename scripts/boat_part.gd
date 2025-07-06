@@ -2,7 +2,6 @@ extends RigidBody2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var delay_animation: Timer = $DelayAnimation
-@onready var floating_animation: AnimationPlayer = $FloatingAnimation
 
 var time := 0.0
 var frequency : float
