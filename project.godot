@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 run/size/viewport_height=3000
 
+[audio]
+
+buses/default_bus_layout="uid://b462lh1l2kgxg"
+
 [autoload]
 
 AudioManager="*res://scenes/audio_manager.tscn"

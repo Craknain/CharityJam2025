@@ -70,7 +70,7 @@ text = "2D artist and music : "
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_2fbfq")
 theme_override_font_sizes/font_size = 20
-text = "2D artist and music : "
+text = " : "
 
 [node name="Label5" type="Label" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
@@ -112,7 +112,7 @@ text = "chibiparty"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_2fbfq")
 theme_override_font_sizes/font_size = 20
-text = "The GameBoys YT"
+text = "Robinhood76"
 
 [node name="theme" type="LinkButton" parent="ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2

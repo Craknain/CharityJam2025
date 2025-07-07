@@ -18,7 +18,7 @@ func _on_theme_pressed() -> void:
 	OS.shell_open("https://itch.io/queue/c/1473270/themes-for-godot-games?game_id=1091572")
 
 func _on_member_4_pressed() -> void:
-	pass # Replace with function body.
+	OS.shell_open("https://freesound.org/people/Robinhood76/")
 
 
 func _on_member_3_pressed() -> void:
@@ -34,3 +34,7 @@ func _on_member_1_pressed() -> void:
 
 func _on_back_pressed() -> void:
 	credits.hide()
+
+
+func _on_link_button_pressed() -> void:
+	pass # Replace with function body.
