@@ -37,4 +37,4 @@ func _on_back_pressed() -> void:
 
 
 func _on_link_button_pressed() -> void:
-	pass # Replace with function body.
+	OS.shell_open("https://freesound.org/people/DAN2008/sounds/789772/")
