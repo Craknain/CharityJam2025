@@ -37,7 +37,6 @@ shape = SubResource("CapsuleShape2D_58yxb")
 
 [node name="TimeToLiveTimer" type="Timer" parent="."]
 wait_time = 5.0
-autostart = true
 
 [connection signal="body_entered" from="CollectAreaZone" to="." method="_on_collect_area_zone_body_entered"]
 [connection signal="timeout" from="TimeToLiveTimer" to="." method="_on_time_to_live_timer_timeout"]
