@@ -2,6 +2,7 @@ extends RigidBody2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var delay_animation: Timer = $DelayAnimation
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 var time := 0.0
 var frequency : float
@@ -18,6 +19,8 @@ func _ready():
 	sprite_2d.frame = randi_range(0, 2)
 	delay_animation.wait_time = randf_range(0, 1)
 	delay_animation.start()
+	
+	
 
 
 func _process(delta: float) -> void:
@@ -26,3 +29,9 @@ func _process(delta: float) -> void:
 
 func _on_delay_animation_timeout() -> void:
 	set_process(true)
+
+
+func _on_body_entered(body: Node) -> void:
+	print('test')
+	if body.is_in_group("player"):
+		body.lose_oxygen(5)

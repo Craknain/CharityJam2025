@@ -4,18 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://dpi8qctmwsfi5" path="res://assets/Boat_pieces.png" id="2_xumoi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xumoi"]
-radius = 14.0
-height = 48.0
+radius = 19.0
+height = 52.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xumoi"]
 atlas = ExtResource("2_xumoi")
 
 [node name="BoatPart" type="RigidBody2D"]
-collision_layer = 2
-collision_mask = 2
 gravity_scale = 0.15
 can_sleep = false
 freeze = true
+freeze_mode = 1
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_r0oqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -32,4 +33,5 @@ frame = 2
 [node name="DelayAnimation" type="Timer" parent="."]
 one_shot = true
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="DelayAnimation" to="." method="_on_delay_animation_timeout"]
