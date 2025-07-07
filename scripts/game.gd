@@ -16,4 +16,5 @@ func _input(event):
 func _process(delta: float) -> void:
 	if get_tree().get_nodes_in_group('items').is_empty():
 		get_tree().change_scene_to_file("res://scenes/victory_screen.tscn")
-	item_count_label.text = "Remaining items : %d" % get_tree().get_nodes_in_group('items').size()
+	else:
+		item_count_label.text = "Remaining items : %d" % get_tree().get_nodes_in_group('items').size()
