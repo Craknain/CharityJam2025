@@ -19,7 +19,6 @@ run/size/viewport_height=3000
 [autoload]
 
 AudioManager="*res://scenes/audio_manager.tscn"
-Utilities="*res://scenes/utilities.tscn"
 
 [global_group]
 
