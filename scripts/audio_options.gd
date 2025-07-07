@@ -3,9 +3,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$VBoxContainer/Masterbar.value = db_to_linear(AudioServer.get_bus_volume_db(1))
-	$VBoxContainer/Musicbar.value = db_to_linear(AudioServer.get_bus_volume_db(2))
-	$VBoxContainer/SFXbar.value = db_to_linear(AudioServer.get_bus_volume_db(3))
+	$VBoxContainer/Masterbar.value = db_to_linear(AudioServer.get_bus_volume_db(0))
+	$VBoxContainer/Musicbar.value = db_to_linear(AudioServer.get_bus_volume_db(1))
+	$VBoxContainer/SFXbar.value = db_to_linear(AudioServer.get_bus_volume_db(2))
 
 func _on_sf_xbar_mouse_exited() -> void:
 	release_focus()

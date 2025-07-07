@@ -32,7 +32,7 @@ func refill_oxygen(amount: int):
 	
 func lose_oxygen(amount: int):
 	if oxygen_timer.time_left - amount < 0:
-		print("Dead") # TODO: Go to game over page
+		_on_oxygen_timer_timeout()
 	oxygen_timer.start(oxygen_timer.time_left - amount)
 	get_hit()
 

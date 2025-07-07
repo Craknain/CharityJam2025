@@ -32,6 +32,5 @@ func _on_delay_animation_timeout() -> void:
 
 
 func _on_body_entered(body: Node) -> void:
-	print('test')
 	if body.is_in_group("player"):
 		body.lose_oxygen(5)
