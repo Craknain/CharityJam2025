@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dpi8qctmwsfi5" path="res://assets/Boat_pieces.png" id="2_xumoi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xumoi"]
-radius = 19.0
+radius = 15.0
 height = 52.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xumoi"]
