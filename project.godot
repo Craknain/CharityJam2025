@@ -23,6 +23,7 @@ AudioManager="*res://scenes/audio_manager.tscn"
 [global_group]
 
 player=""
+items=""
 
 [input]
 
