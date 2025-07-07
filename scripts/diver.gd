@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var i_frame: AnimationPlayer = $iFrame
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var MAX_OXYGEN := 30
 
@@ -45,5 +46,6 @@ func _on_surface_body_exited(body: Node2D) -> void:
 		oxygen_timer.paused = false
 		
 func get_hit():
+	audio_stream_player_2d.play()
 	i_frame.play("iFrame")
 	

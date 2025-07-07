@@ -1,5 +1,7 @@
 extends Sprite2D
 
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var time := 0.0
 var frequency : float = 5
@@ -18,4 +20,4 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		queue_free()
+		animation_player.play("Pickup")
